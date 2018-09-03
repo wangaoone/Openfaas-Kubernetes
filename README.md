@@ -78,13 +78,14 @@ $ export KOPS_STATE_STORE=s3://test.k8s.local-state.ym
 #### deploy K8s Cluster
 创建集群的配置文件，不会真正地创建集群：
 ```bash
-$ kops create cluster  --name=${NAME}  zones=us-east-1b  master-size="t2.micro" \
+$ kops create cluster  --name=${NAME}  --zones=us-west-1b  --master-size="t2.micro" \
 --node-size="t2.micro"  --ssh-public-key="~/.ssh/id_rsa.pub"
 ```
 *The zones name should be the full name from aws.<br>*
 ```bash
 $ aws ec2 describe-availability-zones --region us-east-1
 ```
+
 在创建集群之前，可以检查集群的配置文件是否正确:<br>
 ```bash
 $ kops edit cluster ${NAME}

@@ -42,9 +42,10 @@ $ aws iam create-access-key --user-name kops
 $ aws configure
 $ AWS Access Key ID [None]: <accesskeyID-of-kops-user>
 $ AWS Secret Access Key [None]: <secretAccessKey-of-kops-user>
-$ Default region name [None]: us-east-1
+$ Default region name [None]: us-west-1
 $ Default output format [None]: json
 ```
+could not use the region at us-east-1
 #### set the terminal enviornment variables
 ```bash
 $ export AWS_ACCESS_KEY_ID=$(aws configure get aws_access_key_id)
@@ -58,7 +59,7 @@ $ ssh-keygen
 ### set S3 bucket
   为了让 kops 创建基于 gossip 的集群，集群的命名需要使用.k8s.local作为后缀，例如，这里我们将集群命名为cluster.k8s.local
 ```bash
-$ export NAME=ao.k8s.local
+$ export NAME=test.k8s.local
 ```
 I do not know why the cluster.k8s.local has existed.<br>
 try not use the same name of the s3 bucket.
@@ -66,7 +67,12 @@ create s3 bucket
 
 ```bash
 $ aws s3api create-bucket --bucket ${NAME}-state.ym --create-bucket-configuration LocationConstraint=$AWS_REGION
-$ export KOPS_STATE_STORE=s3://ao.k8s.local-state.ym
+$ export KOPS_STATE_STORE=s3://test.k8s.local-state.ym
+```
+```
+{
+    "Location": "http://test.k8s.local-state.ym.s3.amazonaws.com/"
+}
 ```
 
 #### deploy K8s Cluster

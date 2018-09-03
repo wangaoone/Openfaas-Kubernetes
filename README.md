@@ -36,7 +36,7 @@ $ aws iam create-access-key --user-name kops
 $ aws configure
 $ AWS Access Key ID [None]: <accesskeyID-of-kops-user>
 $ AWS Secret Access Key [None]: <secretAccessKey-of-kops-user>
-$ Default region name [None]: ap-northeast-1
+$ Default region name [None]: us-east-1
 $ Default output format [None]: json
 ```
 #### set the terminal enviornment variables

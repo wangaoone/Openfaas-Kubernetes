@@ -33,7 +33,6 @@ $ aws iam add-user-to-group --user-name kops --group-name kops
 #### create the key for kops and configure the aws with the new key
 ```bash
 $ aws iam create-access-key --user-name kops
-
 $ aws configure
 $ AWS Access Key ID [None]: <accesskeyID-of-kops-user>
 $ AWS Secret Access Key [None]: <secretAccessKey-of-kops-user>
@@ -63,4 +62,13 @@ $ aws s3api create-bucket --bucket ${NAME}-state.ym --create-bucket-configuratio
 $ export KOPS_STATE_STORE=s3://ao.k8s.local-state.ym
 ```
 
-#### deploy K8s
+#### deploy K8s Cluster
+创建集群的配置文件，不会真正地创建集群：
+```bash
+$ kops create cluster  --name=${NAME}  zones=us-east-1b  master-size="t2.micro" \
+--node-size="t2.micro"  --ssh-public-key="~/.ssh/id_rsa.pub"
+```
+*The zones name should be the full name from aws.<br>*
+```bash
+$ aws ec2 describe-availability-zones --region us-east-1
+```

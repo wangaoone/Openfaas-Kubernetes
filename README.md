@@ -2,6 +2,7 @@
 
 ### set up AWS and IAM
 #### setup the aws cli, kubectl and kops<br>
+linux
 ```Bash
 $ curl -Lo kubectl https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl && chmod +x kubectl
 $ sudo mv kubectl /usr/local/bin/
@@ -11,6 +12,11 @@ $ sudo mv kops-linux-amd64 /usr/local/bin/kops
 $ sudo apt-get install awscli
 $ sudo pip install awscli
 ```
+OSX: setup aws cli, kubetcl, kops
+```
+$ kops version
+```
+
 #### configure the AWS account
 ```Bash
 $ aws configure

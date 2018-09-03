@@ -61,6 +61,7 @@ $ ssh-keygen
 $ export NAME=ao.k8s.local
 ```
 I do not know why the cluster.k8s.local has existed.<br>
+try not use the same name of the s3 bucket.
 create s3 bucket
 
 ```bash

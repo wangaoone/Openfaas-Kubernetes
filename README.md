@@ -55,6 +55,12 @@ $ ssh-keygen
 ```bash
 $ export NAME=ao.k8s.local
 ```
-i do not know why the cluster.***.*** has existed   
+I do not know why the cluster.k8s.local has existed.<br>
+create s3 bucket
 
-### deploy K8s
+```bash
+$ aws s3api create-bucket --bucket ${NAME}-state.ym --create-bucket-configuration LocationConstraint=$AWS_REGION
+$ export KOPS_STATE_STORE=s3://ao.k8s.local-state.ym
+```
+
+#### deploy K8s

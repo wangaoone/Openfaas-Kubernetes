@@ -1,4 +1,5 @@
 ```
+$ kops edit cluster ${NAME}
 
     rbac: {}
   channel: stable

@@ -72,3 +72,15 @@ $ kops create cluster  --name=${NAME}  zones=us-east-1b  master-size="t2.micro" 
 ```bash
 $ aws ec2 describe-availability-zones --region us-east-1
 ```
+在创建集群之前，可以检查集群的配置文件是否正确:<br>
+```bash
+$ kops edit cluster ${NAME}
+```
+如果确认没问题，就可以使用下面的命令创建集群:<br>
+```bash
+$ kops update cluster ${NAME} --yes
+```
+Testing the cluster
+```bash
+$ kops validate cluster
+```

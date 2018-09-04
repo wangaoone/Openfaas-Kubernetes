@@ -52,7 +52,35 @@ check the link https://github.com/openfaas/faas/issues/814
 Use this cmd to check the status of openfaas and use external-ip of gateway-external to get the openfaas ui<br>
 ```
 $ kubectl get all -n openfaas
+  NAME                                READY     STATUS    RESTARTS   AGE
+  pod/alertmanager-5ddb544965-z7lrp   1/1       Running   0          1m
+  pod/gateway-84456688b4-m27bl        2/2       Running   1          1m
+  pod/nats-86955fb749-zw9jf           1/1       Running   0          1m
+  pod/prometheus-6599674f5-tsjg6      1/1       Running   0          1m
+  pod/queue-worker-54c65bc697-9jrgf   1/1       Running   1          1m
+
+  NAME                       TYPE           CLUSTER-IP       EXTERNAL-IP                                                              PORT(S)          AGE
+  service/alertmanager       ClusterIP      100.71.12.153    <none>                                                                   9093/TCP         1m
+  service/gateway            ClusterIP      100.64.75.126    <none>                                                                   8080/TCP         1m
+  service/gateway-external   LoadBalancer   100.67.71.96     a20c495c8afe811e880b0062ffed5884-126380147.us-west-            1.elb.amazonaws.com   8080:32673/TCP   1m
+  service/nats               ClusterIP      100.68.131.177   <none>                                                                   4222/TCP         1m
+  service/prometheus         ClusterIP      100.65.115.40    <none>                                                                   9090/TCP         1m
+
+  NAME                           DESIRED   CURRENT   UP-TO-DATE   AVAILABLE   AGE
+  deployment.apps/alertmanager   1         1         1            1           1m
+  deployment.apps/gateway        1         1         1            1           1m
+  deployment.apps/nats           1         1         1            1           1m
+  deployment.apps/prometheus     1         1         1            1           1m
+  deployment.apps/queue-worker   1         1         1            1           1m
+
+  NAME                                      DESIRED   CURRENT   READY     AGE
+  replicaset.apps/alertmanager-5ddb544965   1         1         1         1m
+  replicaset.apps/gateway-84456688b4        1         1         1         1m
+  replicaset.apps/nats-86955fb749           1         1         1         1m
+  replicaset.apps/prometheus-6599674f5      1         1         1         1m
+  replicaset.apps/queue-worker-54c65bc697   1         1         1         1m
 ```
+
 #### Destroy
 ```
 helm delete --purge openfaas

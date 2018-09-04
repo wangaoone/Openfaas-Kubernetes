@@ -1,5 +1,11 @@
 ### OpenFaas
 kubernetes run起来之后<br>
+
+Clone the official faas-netes repo from github, which is the Kubernetes backend for OpenFaaS.
+```
+$ git clone https://github.com/openfaas/faas-netes 
+$ cd faas-netes
+```
 #### Install the Helm on the local machine
 ```
 $ brew install kubernetes-helm
@@ -42,3 +48,10 @@ $ helm upgrade --install --namespace openfaas --set functionNamespace=openfaas-f
 ```
 if set the rbac=false, there will be an error message.<br>
 check the link https://github.com/openfaas/faas/issues/814
+#### destroy
+```
+helm delete --purge openfaas
+```
+<br>
+related link:<br>
+https://medium.com/@ericstoekl/deploying-openfaas-on-kubernetes-azure-aks-4eea99d0743f

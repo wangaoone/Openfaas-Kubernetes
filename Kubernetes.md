@@ -98,3 +98,6 @@ Testing the cluster
 ```bash
 $ kops validate cluster
 ```
+
+# Links #
+Installing Kubernetes on AWS<br>https://medium.com/containermind/how-to-create-a-kubernetes-cluster-on-aws-in-few-minutes-89dda10354f4

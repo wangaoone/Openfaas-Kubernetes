@@ -99,5 +99,6 @@ Testing the cluster
 $ kops validate cluster
 ```
 
-# Links #
+#### Links
 Installing Kubernetes on AWS<br>https://medium.com/containermind/how-to-create-a-kubernetes-cluster-on-aws-in-few-minutes-89dda10354f4
+使用kops在AWS部署Kubernetes 集群<br>http://senlinzhan.github.io/2018/01/11/k8s-on-aws/

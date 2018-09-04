@@ -48,6 +48,11 @@ $ helm upgrade --install --namespace openfaas --set functionNamespace=openfaas-f
 ```
 if set the rbac=false, there will be an error message.<br>
 check the link https://github.com/openfaas/faas/issues/814
+
+Use this cmd to check the status of openfaas and use external-ip of gateway-external to get the openfaas ui<br>
+```
+$ kubectl get all -n openfaas
+```
 #### Destroy
 ```
 helm delete --purge openfaas

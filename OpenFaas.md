@@ -48,10 +48,10 @@ $ helm upgrade --install --namespace openfaas --set functionNamespace=openfaas-f
 ```
 if set the rbac=false, there will be an error message.<br>
 check the link https://github.com/openfaas/faas/issues/814
-#### destroy
+#### Destroy
 ```
 helm delete --purge openfaas
 ```
 <br>
-related link:<br>
+related link:
 https://medium.com/@ericstoekl/deploying-openfaas-on-kubernetes-azure-aks-4eea99d0743f

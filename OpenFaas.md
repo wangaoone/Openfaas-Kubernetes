@@ -12,6 +12,7 @@ $ brew install kubernetes-helm
 ```
 You will find the tiller by run this cmd
 ```
+$ helm init --upgrade
 $ kubectl get pods -n kube-system
 ```
 

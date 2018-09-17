@@ -100,3 +100,38 @@ OpenFaaS - Serverless Functions Made Simple<br>https://github.com/openfaas/faas-
 ```
 kubectl get pods -n kube-system -o wide
 ```
+### logs
+```
+ip-172-20-37-165  master
+
+ip-172-20-48-53   node
+
+ip-172-20-48-53   node
+```
+
+```
+AodeMacBook-Pro:faas-cli wang$ kubectl get pods --all-namespaces -o wide
+NAMESPACE     NAME                                                                  READY     STATUS    RESTARTS   AGE       IP              NODE
+kube-system   dns-controller-6d6b7f78b-45r2n                                        1/1       Running   0          51m       172.20.37.165   ip-172-20-37-165.us-west-1.compute.internal
+kube-system   etcd-server-events-ip-172-20-37-165.us-west-1.compute.internal        1/1       Running   0          50m       172.20.37.165   ip-172-20-37-165.us-west-1.compute.internal
+kube-system   etcd-server-ip-172-20-37-165.us-west-1.compute.internal               1/1       Running   0          51m       172.20.37.165   ip-172-20-37-165.us-west-1.compute.internal
+kube-system   kube-apiserver-ip-172-20-37-165.us-west-1.compute.internal            1/1       Running   0          50m       172.20.37.165   ip-172-20-37-165.us-west-1.compute.internal
+kube-system   kube-controller-manager-ip-172-20-37-165.us-west-1.compute.internal   1/1       Running   0          50m       172.20.37.165   ip-172-20-37-165.us-west-1.compute.internal
+kube-system   kube-dns-5fbcb4d67b-2nxl5                                             3/3       Running   0          49m       100.96.2.3      ip-172-20-48-53.us-west-1.compute.internal
+kube-system   kube-dns-5fbcb4d67b-cldc6                                             3/3       Running   0          51m       100.96.1.2      ip-172-20-56-102.us-west-1.compute.internal
+kube-system   kube-dns-autoscaler-6874c546dd-fp7wn                                  1/1       Running   0          51m       100.96.2.2      ip-172-20-48-53.us-west-1.compute.internal
+kube-system   kube-proxy-ip-172-20-37-165.us-west-1.compute.internal                1/1       Running   0          50m       172.20.37.165   ip-172-20-37-165.us-west-1.compute.internal
+kube-system   kube-proxy-ip-172-20-48-53.us-west-1.compute.internal                 1/1       Running   0          50m       172.20.48.53    ip-172-20-48-53.us-west-1.compute.internal
+kube-system   kube-proxy-ip-172-20-56-102.us-west-1.compute.internal                1/1       Running   0          49m       172.20.56.102   ip-172-20-56-102.us-west-1.compute.internal
+kube-system   kube-scheduler-ip-172-20-37-165.us-west-1.compute.internal            1/1       Running   0          51m       172.20.37.165   ip-172-20-37-165.us-west-1.compute.internal
+kube-system   kubernetes-dashboard-7b9c7bc8c9-tpqcj                                 1/1       Running   0          46m       100.96.2.4      ip-172-20-48-53.us-west-1.compute.internal
+kube-system   tiller-deploy-895d57dd9-5pjgs                                         1/1       Running   0          38m       100.96.2.5      ip-172-20-48-53.us-west-1.compute.internal
+openfaas      alertmanager-57d776f497-nfpkm                                         1/1       Running   0          38m       100.96.1.4      ip-172-20-56-102.us-west-1.compute.internal
+openfaas      gateway-756d7bd4c6-99749                                              2/2       Running   2          38m       100.96.2.6      ip-172-20-48-53.us-west-1.compute.internal
+openfaas      nats-86955fb749-dw6qc                                                 1/1       Running   0          38m       100.96.1.7      ip-172-20-56-102.us-west-1.compute.internal
+openfaas      prometheus-766c8b79-jd27h                                             1/1       Running   0          38m       100.96.1.6      ip-172-20-56-102.us-west-1.compute.internal
+openfaas      queue-worker-5b6487c99-zvx8h                                          1/1       Running   0          38m       100.96.1.5      ip-172-20-56-102.us-west-1.compute.internal
+openfaas-fn   figlet-675bf95f4f-bkvml                                               1/1       Running   0          31m       100.96.2.7      ip-172-20-48-53.us-west-1.compute.internal
+openfaas-fn   nodejs-echo-6c4b497967-mrsc4                                          1/1       Running   0          15m       100.96.2.8      ip-172-20-48-53.us-west-1.compute.internal
+openfaas-fn   shrink-image-84f684c45-bmt4z                                          1/1       Running   0          18m       100.96.1.8      ip-172-20-56-102.us-west-1.compute.internal
+```

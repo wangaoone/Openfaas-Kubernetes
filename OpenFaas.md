@@ -91,3 +91,12 @@ Related link:<br>
 Deploying OpenFaaS on Kubernetes — Azure AKS:<br>https://medium.com/@ericstoekl/deploying-openfaas-on-kubernetes-azure-aks-4eea99d0743f<br>
 Helm and deploy from offical:<br>https://github.com/openfaas/faas-netes/blob/master/HELM.md<br>
 OpenFaaS - Serverless Functions Made Simple<br>https://github.com/openfaas/faas-netes/blob/master/chart/openfaas/README.md<br>
+
+
+
+
+
+###### 几个命令
+```
+kubectl get pods -n kube-system -o wide
+```

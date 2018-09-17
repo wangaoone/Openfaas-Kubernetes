@@ -81,6 +81,15 @@ $ export KOPS_STATE_STORE=s3://test.k8s.local-state.ym
 $ kops create cluster  --name=${NAME}  --zones=us-west-1b  --master-size="t2.micro" \
 --node-size="t2.micro"  --ssh-public-key="~/.ssh/id_rsa.pub"
 ```
+```
+kops create cluster \
+ --name=${NAME} \
+ --zones=us-west-2a \
+ --master-size="t2.micro" \
+ --node-size="t2.micro" \
+ --node-count="3" \
+ --ssh-public-key="~/.ssh/id_rsa.pub"
+ ```
 *The zones name should be the full name from aws.<br>*
 ```bash
 $ aws ec2 describe-availability-zones --region us-east-1

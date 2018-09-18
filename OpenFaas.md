@@ -134,4 +134,6 @@ openfaas      queue-worker-5b6487c99-zvx8h                                      
 openfaas-fn   figlet-675bf95f4f-bkvml                                               1/1       Running   0          31m       100.96.2.7      ip-172-20-48-53.us-west-1.compute.internal
 openfaas-fn   nodejs-echo-6c4b497967-mrsc4                                          1/1       Running   0          15m       100.96.2.8      ip-172-20-48-53.us-west-1.compute.internal
 openfaas-fn   shrink-image-84f684c45-bmt4z                                          1/1       Running   0          18m       100.96.1.8      ip-172-20-56-102.us-west-1.compute.internal
+
+$ kubectl describe -n=openfaas pod kube-scheduler-ip-172-20-37-165.us-west-1.compute.internal
 ```

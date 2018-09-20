@@ -1,0 +1,146 @@
+### 172.20.56.102 logs /var/log/pods
+01d143ee-baaf-11e8-bf26-066b5309ab86 alertmanager
+```
+{"log":"level=info ts=2018-09-17T19:22:35.407168926Z caller=main.go:174 msg=\"Starting Alertmanager\" version=\"(version=0.15.0, branch=HEAD, revision=462c969d85cf1a473587754d55e4a3c4a2abc63c)\"\n","stream":"stderr","time":"2018-09-17T19:22:35.407626505Z"}
+{"log":"level=info ts=2018-09-17T19:22:35.407211415Z caller=main.go:175 build_context=\"(go=go1.10.3, user=root@bec9939eb862, date=20180622-11:58:41)\"\n","stream":"stderr","time":"2018-09-17T19:22:35.407654137Z"}
+{"log":"level=info ts=2018-09-17T19:22:35.421072728Z caller=cluster.go:155 component=cluster msg=\"setting advertise address explicitly\" addr=100.96.1.4 port=9094\n","stream":"stderr","time":"2018-09-17T19:22:35.421249039Z"}
+{"log":"level=info ts=2018-09-17T19:22:35.427073733Z caller=main.go:311 msg=\"Loading configuration file\" file=/alertmanager.yml\n","stream":"stderr","time":"2018-09-17T19:22:35.427315407Z"}
+{"log":"level=info ts=2018-09-17T19:22:35.432920732Z caller=main.go:387 msg=Listening address=:9093\n","stream":"stderr","time":"2018-09-17T19:22:35.433141204Z"}
+{"log":"level=info ts=2018-09-17T19:22:35.435393185Z caller=cluster.go:561 component=cluster msg=\"Waiting for gossip to settle...\" interval=2s\n","stream":"stderr","time":"2018-09-17T19:22:35.435547853Z"}
+{"log":"level=info ts=2018-09-17T19:22:37.435582952Z caller=cluster.go:586 component=cluster msg=\"gossip not settled\" polls=0 before=0 now=1 elapsed=2.000117353s\n","stream":"stderr","time":"2018-09-17T19:22:37.446735457Z"}
+{"log":"level=info ts=2018-09-17T19:22:45.436388427Z caller=cluster.go:578 component=cluster msg=\"gossip settled; proceeding\" elapsed=10.000925821s\n","stream":"stderr","time":"2018-09-17T19:22:45.436630661Z"}
+```
+/var/log/pods/01d1b5b7-baaf-11e8-bf26-066b5309ab86/nats
+```
+{"log":"[1] 2018/09/17 19:22:32.645093 [INF] STREAM: Starting nats-streaming-server[faas-cluster] version 0.6.0\n","stream":"stderr","time":"2018-09-17T19:22:32.645625865Z"}
+{"log":"[1] 2018/09/17 19:22:32.645132 [INF] STREAM: ServerID: gEhFLZq4Xn0jHEd97wrGLE\n","stream":"stderr","time":"2018-09-17T19:22:32.645659318Z"}
+{"log":"[1] 2018/09/17 19:22:32.645135 [INF] STREAM: Go version: go1.9.1\n","stream":"stderr","time":"2018-09-17T19:22:32.645663463Z"}
+{"log":"[1] 2018/09/17 19:22:32.645340 [INF] Starting nats-server version 1.0.4\n","stream":"stderr","time":"2018-09-17T19:22:32.64566635Z"}
+{"log":"[1] 2018/09/17 19:22:32.645722 [INF] Listening for client connections on 0.0.0.0:4222\n","stream":"stderr","time":"2018-09-17T19:22:32.645971847Z"}
+{"log":"[1] 2018/09/17 19:22:32.645728 [INF] Server is ready\n","stream":"stderr","time":"2018-09-17T19:22:32.645982523Z"}
+{"log":"[1] 2018/09/17 19:22:32.922114 [INF] STREAM: Message store is MEMORY\n","stream":"stderr","time":"2018-09-17T19:22:32.922676415Z"}
+{"log":"[1] 2018/09/17 19:22:32.922213 [INF] STREAM: ---------- Store Limits ----------\n","stream":"stderr","time":"2018-09-17T19:22:32.922701093Z"}
+{"log":"[1] 2018/09/17 19:22:32.922234 [INF] STREAM: Channels:                  100 *\n","stream":"stderr","time":"2018-09-17T19:22:32.922705181Z"}
+{"log":"[1] 2018/09/17 19:22:32.922248 [INF] STREAM: --------- Channels Limits --------\n","stream":"stderr","time":"2018-09-17T19:22:32.922708105Z"}
+{"log":"[1] 2018/09/17 19:22:32.922261 [INF] STREAM:   Subscriptions:          1000 *\n","stream":"stderr","time":"2018-09-17T19:22:32.922711049Z"}
+{"log":"[1] 2018/09/17 19:22:32.922275 [INF] STREAM:   Messages     :       1000000 *\n","stream":"stderr","time":"2018-09-17T19:22:32.922713951Z"}
+{"log":"[1] 2018/09/17 19:22:32.922333 [INF] STREAM:   Bytes        :     976.56 MB *\n","stream":"stderr","time":"2018-09-17T19:22:32.922716707Z"}
+{"log":"[1] 2018/09/17 19:22:32.922349 [INF] STREAM:   Age          :     unlimited *\n","stream":"stderr","time":"2018-09-17T19:22:32.922719328Z"}
+{"log":"[1] 2018/09/17 19:22:32.922362 [INF] STREAM: ----------------------------------\n","stream":"stderr","time":"2018-09-17T19:22:32.922722308Z"}
+```
+```
+admin@ip-172-20-56-102:/var/log/pods/01d24485-baaf-11e8-bf26-066b5309ab86/prometheus$ sudo cat 0.log
+{"log":"level=info ts=2018-09-17T19:22:31.005296062Z caller=main.go:222 msg=\"Starting Prometheus\" version=\"(version=2.3.1, branch=HEAD, revision=188ca45bd85ce843071e768d855722a9d9dabe03)\"\n","stream":"stderr","time":"2018-09-17T19:22:31.005730664Z"}
+{"log":"level=info ts=2018-09-17T19:22:31.005408036Z caller=main.go:223 build_context=\"(go=go1.10.3, user=root@82ef94f1b8f7, date=20180619-15:56:22)\"\n","stream":"stderr","time":"2018-09-17T19:22:31.005781829Z"}
+{"log":"level=info ts=2018-09-17T19:22:31.005453839Z caller=main.go:224 host_details=\"(Linux 4.4.121-k8s #1 SMP Sun Mar 11 19:39:47 UTC 2018 x86_64 prometheus-766c8b79-jd27h (none))\"\n","stream":"stderr","time":"2018-09-17T19:22:31.005786827Z"}
+{"log":"level=info ts=2018-09-17T19:22:31.005487951Z caller=main.go:225 fd_limits=\"(soft=1048576, hard=1048576)\"\n","stream":"stderr","time":"2018-09-17T19:22:31.005790211Z"}
+{"log":"level=info ts=2018-09-17T19:22:31.006747692Z caller=main.go:514 msg=\"Starting TSDB ...\"\n","stream":"stderr","time":"2018-09-17T19:22:31.006983229Z"}
+{"log":"level=info ts=2018-09-17T19:22:31.012396869Z caller=web.go:415 component=web msg=\"Start listening for connections\" address=0.0.0.0:9090\n","stream":"stderr","time":"2018-09-17T19:22:31.012645191Z"}
+{"log":"level=info ts=2018-09-17T19:22:31.013267493Z caller=main.go:524 msg=\"TSDB started\"\n","stream":"stderr","time":"2018-09-17T19:22:31.013659023Z"}
+{"log":"level=info ts=2018-09-17T19:22:31.0133303Z caller=main.go:603 msg=\"Loading configuration file\" filename=/etc/prometheus/prometheus.yml\n","stream":"stderr","time":"2018-09-17T19:22:31.013671972Z"}
+{"log":"level=info ts=2018-09-17T19:22:31.01507873Z caller=main.go:500 msg=\"Server is ready to receive web requests.\"\n","stream":"stderr","time":"2018-09-17T19:22:31.015306289Z"}
+{"log":"level=error ts=2018-09-17T19:22:46.016444143Z caller=notifier.go:473 component=notifier alertmanager=http://alertmanager:9093/api/v1/alerts count=0 msg=\"Error sending alert\" err=\"context deadline exceeded\"\n","stream":"stderr","time":"2018-09-17T19:22:46.016812561Z"}
+{"log":"level=info ts=2018-09-17T21:00:03.187361775Z caller=compact.go:387 component=tsdb msg=\"write block\" mint=1537207200000 maxt=1537214400000 ulid=01CQMNAG6QKJFDCEK813ZNFSA5\n","stream":"stderr","time":"2018-09-17T21:00:03.187693908Z"}
+{"log":"level=info ts=2018-09-17T21:00:03.19646108Z caller=head.go:348 component=tsdb msg=\"head GC completed\" duration=1.416873ms\n","stream":"stderr","time":"2018-09-17T21:00:03.196855756Z"}
+{"log":"level=info ts=2018-09-17T21:00:03.19654087Z caller=head.go:357 component=tsdb msg=\"WAL truncation completed\" duration=2.449µs\n","stream":"stderr","time":"2018-09-17T21:00:03.19686979Z"}
+{"log":"level=info ts=2018-09-17T23:00:03.209677008Z caller=compact.go:387 component=tsdb msg=\"write block\" mint=1537214400000 maxt=1537221600000 ulid=01CQMW67ERG0DYBGEA45RD0VT1\n","stream":"stderr","time":"2018-09-17T23:00:03.209982076Z"}
+{"log":"level=info ts=2018-09-17T23:00:03.218236605Z caller=head.go:348 component=tsdb msg=\"head GC completed\" duration=1.082008ms\n","stream":"stderr","time":"2018-09-17T23:00:03.218597224Z"}
+{"log":"level=info ts=2018-09-17T23:00:03.218304683Z caller=head.go:357 component=tsdb msg=\"WAL truncation completed\" duration=2.099µs\n","stream":"stderr","time":"2018-09-17T23:00:03.218610149Z"}
+{"log":"level=info ts=2018-09-18T01:00:03.202324827Z caller=compact.go:387 component=tsdb msg=\"write block\" mint=1537221600000 maxt=1537228800000 ulid=01CQN31YPQ1QC6V8EJXTTPF2AB\n","stream":"stderr","time":"2018-09-18T01:00:03.202602348Z"}
+{"log":"level=info ts=2018-09-18T01:00:03.217140711Z caller=head.go:348 component=tsdb msg=\"head GC completed\" duration=1.296803ms\n","stream":"stderr","time":"2018-09-18T01:00:03.217551955Z"}
+{"log":"level=info ts=2018-09-18T01:00:03.217231024Z caller=head.go:357 component=tsdb msg=\"WAL truncation completed\" duration=2.332µs\n","stream":"stderr","time":"2018-09-18T01:00:03.21756794Z"}
+{"log":"level=info ts=2018-09-18T03:00:03.196609986Z caller=compact.go:387 component=tsdb msg=\"write block\" mint=1537228800000 maxt=1537236000000 ulid=01CQN9XNYR0BP051BQP8NSNY87\n","stream":"stderr","time":"2018-09-18T03:00:03.196895862Z"}
+{"log":"level=info ts=2018-09-18T03:00:03.210270398Z caller=head.go:348 component=tsdb msg=\"head GC completed\" duration=1.157069ms\n","stream":"stderr","time":"2018-09-18T03:00:03.210677295Z"}
+{"log":"level=info ts=2018-09-18T03:00:03.210357765Z caller=head.go:357 component=tsdb msg=\"WAL truncation completed\" duration=2.31µs\n","stream":"stderr","time":"2018-09-18T03:00:03.210692708Z"}
+{"log":"level=info ts=2018-09-18T03:00:03.2733881Z caller=compact.go:347 component=tsdb msg=\"compact blocks\" count=3 mint=1537207200000 maxt=1537228800000 ulid=01CQN9XP0JEM6X5V6VFJJAQY00 sources=\"[01CQMNAG6QKJFDCEK813ZNFSA5 01CQMW67ERG0DYBGEA45RD0VT1 01CQN31YPQ1QC6V8EJXTTPF2AB]\"\n","stream":"stderr","time":"2018-09-18T03:00:03.275781631Z"}
+{"log":"level=info ts=2018-09-18T05:00:03.207148142Z caller=compact.go:387 component=tsdb msg=\"write block\" mint=1537236000000 maxt=1537243200000 ulid=01CQNGSD6S52JXJN5DKHZC7512\n","stream":"stderr","time":"2018-09-18T05:00:03.209784652Z"}
+{"log":"level=info ts=2018-09-18T05:00:03.226172697Z caller=head.go:348 component=tsdb msg=\"head GC completed\" duration=2.939837ms\n","stream":"stderr","time":"2018-09-18T05:00:03.227281457Z"}
+{"log":"level=info ts=2018-09-18T05:00:03.22787997Z caller=head.go:357 component=tsdb msg=\"WAL truncation completed\" duration=765.512µs\n","stream":"stderr","time":"2018-09-18T05:00:03.228097676Z"}
+{"log":"level=info ts=2018-09-18T07:00:03.201437266Z caller=compact.go:387 component=tsdb msg=\"write block\" mint=1537243200000 maxt=1537250400000 ulid=01CQNQN4EQF5D9580W5KB11MJA\n","stream":"stderr","time":"2018-09-18T07:00:03.20176968Z"}
+{"log":"level=info ts=2018-09-18T07:00:03.210001557Z caller=head.go:348 component=tsdb msg=\"head GC completed\" duration=1.098298ms\n","stream":"stderr","time":"2018-09-18T07:00:03.210388722Z"}
+{"log":"level=info ts=2018-09-18T07:00:03.210068721Z caller=head.go:357 component=tsdb msg=\"WAL truncation completed\" duration=2.368µs\n","stream":"stderr","time":"2018-09-18T07:00:03.210401216Z"}
+{"log":"level=info ts=2018-09-18T09:00:03.205869929Z caller=compact.go:387 component=tsdb msg=\"write block\" mint=1537250400000 maxt=1537257600000 ulid=01CQNYGVPQ7299KZ1WCMKXM6EE\n","stream":"stderr","time":"2018-09-18T09:00:03.206147598Z"}
+{"log":"level=info ts=2018-09-18T09:00:03.215466598Z caller=head.go:348 component=tsdb msg=\"head GC completed\" duration=1.027228ms\n","stream":"stderr","time":"2018-09-18T09:00:03.215575783Z"}
+{"log":"level=info ts=2018-09-18T09:00:03.215528371Z caller=head.go:357 component=tsdb msg=\"WAL truncation completed\" duration=2.172µs\n","stream":"stderr","time":"2018-09-18T09:00:03.215909811Z"}
+{"log":"level=info ts=2018-09-18T09:00:03.293143815Z caller=compact.go:347 component=tsdb msg=\"compact blocks\" count=3 mint=1537228800000 maxt=1537250400000 ulid=01CQNYGVRQFR2P9E8MTCZVJ2FX sources=\"[01CQN9XNYR0BP051BQP8NSNY87 01CQNGSD6S52JXJN5DKHZC7512 01CQNQN4EQF5D9580W5KB11MJA]\"\n","stream":"stderr","time":"2018-09-18T09:00:03.293793817Z"}
+{"log":"level=info ts=2018-09-18T11:00:03.206959043Z caller=compact.go:387 component=tsdb msg=\"write block\" mint=1537257600000 maxt=1537264800000 ulid=01CQP5CJYQ1FGNM34R6D4JQHXS\n","stream":"stderr","time":"2018-09-18T11:00:03.207272105Z"}
+{"log":"level=info ts=2018-09-18T11:00:03.215908295Z caller=head.go:348 component=tsdb msg=\"head GC completed\" duration=1.030321ms\n","stream":"stderr","time":"2018-09-18T11:00:03.216294687Z"}
+{"log":"level=info ts=2018-09-18T11:00:03.215976782Z caller=head.go:357 component=tsdb msg=\"WAL truncation completed\" duration=2.31µs\n","stream":"stderr","time":"2018-09-18T11:00:03.216307254Z"}
+{"log":"level=info ts=2018-09-18T11:00:03.300974077Z caller=compact.go:347 component=tsdb msg=\"compact blocks\" count=2 mint=1537207200000 maxt=1537250400000 ulid=01CQP5CK0T61ZBQEPGXEKQ2VMQ sources=\"[01CQN9XP0JEM6X5V6VFJJAQY00 01CQNYGVRQFR2P9E8MTCZVJ2FX]\"\n","stream":"stderr","time":"2018-09-18T11:00:03.301227981Z"}
+{"log":"level=info ts=2018-09-18T13:00:03.216094204Z caller=compact.go:387 component=tsdb msg=\"write block\" mint=1537264800000 maxt=1537272000000 ulid=01CQPC8A6QCY7EXQRRTGMW65S0\n","stream":"stderr","time":"2018-09-18T13:00:03.216361293Z"}
+{"log":"level=info ts=2018-09-18T13:00:03.229732827Z caller=head.go:348 component=tsdb msg=\"head GC completed\" duration=1.089044ms\n","stream":"stderr","time":"2018-09-18T13:00:03.230135271Z"}
+{"log":"level=info ts=2018-09-18T13:00:03.229826516Z caller=head.go:357 component=tsdb msg=\"WAL truncation completed\" duration=2.282µs\n","stream":"stderr","time":"2018-09-18T13:00:03.230147497Z"}
+{"log":"level=info ts=2018-09-18T15:00:03.198155453Z caller=compact.go:387 component=tsdb msg=\"write block\" mint=1537272000000 maxt=1537279200000 ulid=01CQPK41EQE53JRA8T1PWENVE3\n","stream":"stderr","time":"2018-09-18T15:00:03.198423177Z"}
+{"log":"level=info ts=2018-09-18T15:00:03.214828894Z caller=head.go:348 component=tsdb msg=\"head GC completed\" duration=1.140335ms\n","stream":"stderr","time":"2018-09-18T15:00:03.215247891Z"}
+{"log":"level=info ts=2018-09-18T15:00:03.214930785Z caller=head.go:357 component=tsdb msg=\"WAL truncation completed\" duration=2.255µs\n","stream":"stderr","time":"2018-09-18T15:00:03.215266643Z"}
+{"log":"level=info ts=2018-09-18T15:00:03.28126021Z caller=compact.go:347 component=tsdb msg=\"compact blocks\" count=3 mint=1537250400000 maxt=1537272000000 ulid=01CQPK41GPETW6SB7CDM0ZBV97 sources=\"[01CQNYGVPQ7299KZ1WCMKXM6EE 01CQP5CJYQ1FGNM34R6D4JQHXS 01CQPC8A6QCY7EXQRRTGMW65S0]\"\n","stream":"stderr","time":"2018-09-18T15:00:03.281533973Z"}
+{"log":"level=info ts=2018-09-18T17:00:03.210607322Z caller=compact.go:387 component=tsdb msg=\"write block\" mint=1537279200000 maxt=1537286400000 ulid=01CQPSZRPQ9YC4ZW9PHHXRS3J9\n","stream":"stderr","time":"2018-09-18T17:00:03.2108761Z"}
+{"log":"level=info ts=2018-09-18T17:00:03.224907289Z caller=head.go:348 component=tsdb msg=\"head GC completed\" duration=1.11778ms\n","stream":"stderr","time":"2018-09-18T17:00:03.225306948Z"}
+{"log":"level=info ts=2018-09-18T17:00:03.22503081Z caller=head.go:357 component=tsdb msg=\"WAL truncation completed\" duration=2.609µs\n","stream":"stderr","time":"2018-09-18T17:00:03.225321248Z"}
+{"log":"level=info ts=2018-09-18T19:00:03.223508313Z caller=compact.go:387 component=tsdb msg=\"write block\" mint=1537286400000 maxt=1537293600000 ulid=01CQQ0VFYZYMH6WBCR6FPR701R\n","stream":"stderr","time":"2018-09-18T19:00:03.223810682Z"}
+{"log":"level=info ts=2018-09-18T19:00:03.237096897Z caller=head.go:348 component=tsdb msg=\"head GC completed\" duration=1.130747ms\n","stream":"stderr","time":"2018-09-18T19:00:03.237498994Z"}
+{"log":"level=info ts=2018-09-18T19:00:03.237193454Z caller=head.go:357 component=tsdb msg=\"WAL truncation completed\" duration=2.985µs\n","stream":"stderr","time":"2018-09-18T19:00:03.237515422Z"}
+{"log":"level=info ts=2018-09-18T21:00:03.208544218Z caller=compact.go:387 component=tsdb msg=\"write block\" mint=1537293600000 maxt=1537300800000 ulid=01CQQ7Q76QZQT5GXT8D97CZEGF\n","stream":"stderr","time":"2018-09-18T21:00:03.208809839Z"}
+{"log":"level=info ts=2018-09-18T21:00:03.21859586Z caller=head.go:348 component=tsdb msg=\"head GC completed\" duration=1.095327ms\n","stream":"stderr","time":"2018-09-18T21:00:03.218988346Z"}
+{"log":"level=info ts=2018-09-18T21:00:03.218668071Z caller=head.go:357 component=tsdb msg=\"WAL truncation completed\" duration=2.97µs\n","stream":"stderr","time":"2018-09-18T21:00:03.219001359Z"}
+{"log":"level=info ts=2018-09-18T21:00:03.288950697Z caller=compact.go:347 component=tsdb msg=\"compact blocks\" count=3 mint=1537272000000 maxt=1537293600000 ulid=01CQQ7Q78T2HYPVKXJKE55RQHM sources=\"[01CQPK41EQE53JRA8T1PWENVE3 01CQPSZRPQ9YC4ZW9PHHXRS3J9 01CQQ0VFYZYMH6WBCR6FPR701R]\"\n","stream":"stderr","time":"2018-09-18T21:00:03.289205892Z"}
+{"log":"level=info ts=2018-09-18T23:00:03.234103286Z caller=compact.go:387 component=tsdb msg=\"write block\" mint=1537300800000 maxt=1537308000000 ulid=01CQQEJYEQQHJ259J6JYR5F4WT\n","stream":"stderr","time":"2018-09-18T23:00:03.234372219Z"}
+{"log":"level=info ts=2018-09-18T23:00:03.255234805Z caller=head.go:348 component=tsdb msg=\"head GC completed\" duration=1.293255ms\n","stream":"stderr","time":"2018-09-18T23:00:03.255490477Z"}
+{"log":"level=info ts=2018-09-18T23:00:03.259388391Z caller=head.go:357 component=tsdb msg=\"WAL truncation completed\" duration=3.351µs\n","stream":"stderr","time":"2018-09-18T23:00:03.262411031Z"}
+{"log":"level=info ts=2018-09-19T01:00:03.206088706Z caller=compact.go:387 component=tsdb msg=\"write block\" mint=1537308000000 maxt=1537315200000 ulid=01CQQNENPQ63CWMBJXJJK89NJA\n","stream":"stderr","time":"2018-09-19T01:00:03.206355072Z"}
+{"log":"level=info ts=2018-09-19T01:00:03.216149511Z caller=head.go:348 component=tsdb msg=\"head GC completed\" duration=1.145267ms\n","stream":"stderr","time":"2018-09-19T01:00:03.216553425Z"}
+{"log":"level=info ts=2018-09-19T01:00:03.21624345Z caller=head.go:357 component=tsdb msg=\"WAL truncation completed\" duration=2.189µs\n","stream":"stderr","time":"2018-09-19T01:00:03.216583343Z"}
+{"log":"level=info ts=2018-09-19T03:00:03.224759011Z caller=compact.go:387 component=tsdb msg=\"write block\" mint=1537315200000 maxt=1537322400000 ulid=01CQQWACYXGBWR6BZMYDZR2GVW\n","stream":"stderr","time":"2018-09-19T03:00:03.225122589Z"}
+{"log":"level=info ts=2018-09-19T03:00:03.234393593Z caller=head.go:348 component=tsdb msg=\"head GC completed\" duration=1.003166ms\n","stream":"stderr","time":"2018-09-19T03:00:03.234796939Z"}
+{"log":"level=info ts=2018-09-19T03:00:03.234478469Z caller=head.go:357 component=tsdb msg=\"WAL truncation completed\" duration=2.29µs\n","stream":"stderr","time":"2018-09-19T03:00:03.234809681Z"}
+{"log":"level=info ts=2018-09-19T03:00:03.301385582Z caller=compact.go:347 component=tsdb msg=\"compact blocks\" count=3 mint=1537293600000 maxt=1537315200000 ulid=01CQQWAD19Y4S7DK9568MJK0C8 sources=\"[01CQQ7Q76QZQT5GXT8D97CZEGF 01CQQEJYEQQHJ259J6JYR5F4WT 01CQQNENPQ63CWMBJXJJK89NJA]\"\n","stream":"stderr","time":"2018-09-19T03:00:03.301652638Z"}
+{"log":"level=info ts=2018-09-19T03:00:03.392324403Z caller=compact.go:347 component=tsdb msg=\"compact blocks\" count=3 mint=1537250400000 maxt=1537315200000 ulid=01CQQWAD3NWFZY4XGJ7GKX9SQ7 sources=\"[01CQPK41GPETW6SB7CDM0ZBV97 01CQQ7Q78T2HYPVKXJKE55RQHM 01CQQWAD19Y4S7DK9568MJK0C8]\"\n","stream":"stderr","time":"2018-09-19T03:00:03.392626952Z"}
+{"log":"level=info ts=2018-09-19T05:00:03.205051708Z caller=compact.go:387 component=tsdb msg=\"write block\" mint=1537322400000 maxt=1537329600000 ulid=01CQR3646RV51SFYXAZ8XFYZXE\n","stream":"stderr","time":"2018-09-19T05:00:03.205319029Z"}
+{"log":"level=info ts=2018-09-19T05:00:03.215747902Z caller=head.go:348 component=tsdb msg=\"head GC completed\" duration=1.138736ms\n","stream":"stderr","time":"2018-09-19T05:00:03.216146343Z"}
+{"log":"level=info ts=2018-09-19T05:00:03.21582687Z caller=head.go:357 component=tsdb msg=\"WAL truncation completed\" duration=2.275µs\n","stream":"stderr","time":"2018-09-19T05:00:03.216160515Z"}
+{"log":"level=info ts=2018-09-19T07:00:03.204278363Z caller=compact.go:387 component=tsdb msg=\"write block\" mint=1537329600000 maxt=1537336800000 ulid=01CQRA1VEQ7RB564FYCGS6SRD1\n","stream":"stderr","time":"2018-09-19T07:00:03.204546129Z"}
+{"log":"level=info ts=2018-09-19T07:00:03.214025909Z caller=head.go:348 component=tsdb msg=\"head GC completed\" duration=1.177685ms\n","stream":"stderr","time":"2018-09-19T07:00:03.214434133Z"}
+{"log":"level=info ts=2018-09-19T07:00:03.214126457Z caller=head.go:357 component=tsdb msg=\"WAL truncation completed\" duration=2.41µs\n","stream":"stderr","time":"2018-09-19T07:00:03.214448467Z"}
+{"log":"level=info ts=2018-09-19T09:00:03.233090309Z caller=compact.go:387 component=tsdb msg=\"write block\" mint=1537336800000 maxt=1537344000000 ulid=01CQRGXJPQTCE6BDFHH722TC5V\n","stream":"stderr","time":"2018-09-19T09:00:03.233409961Z"}
+{"log":"level=info ts=2018-09-19T09:00:03.253586251Z caller=head.go:348 component=tsdb msg=\"head GC completed\" duration=8.096146ms\n","stream":"stderr","time":"2018-09-19T09:00:03.255678765Z"}
+{"log":"level=info ts=2018-09-19T09:00:03.253623059Z caller=head.go:357 component=tsdb msg=\"WAL truncation completed\" duration=1.698µs\n","stream":"stderr","time":"2018-09-19T09:00:03.255693045Z"}
+{"log":"level=info ts=2018-09-19T09:00:03.31639468Z caller=compact.go:347 component=tsdb msg=\"compact blocks\" count=3 mint=1537315200000 maxt=1537336800000 ulid=01CQRGXJT7W1VDR2SA8MCQYFDA sources=\"[01CQQWACYXGBWR6BZMYDZR2GVW 01CQR3646RV51SFYXAZ8XFYZXE 01CQRA1VEQ7RB564FYCGS6SRD1]\"\n","stream":"stderr","time":"2018-09-19T09:00:03.316649755Z"}
+{"log":"level=info ts=2018-09-19T11:00:03.231973729Z caller=compact.go:387 component=tsdb msg=\"write block\" mint=1537344000000 maxt=1537351200000 ulid=01CQRQS9Z14YNZNXNH4SPEVZ4E\n","stream":"stderr","time":"2018-09-19T11:00:03.232254324Z"}
+{"log":"level=info ts=2018-09-19T11:00:03.243451108Z caller=head.go:348 component=tsdb msg=\"head GC completed\" duration=1.120349ms\n","stream":"stderr","time":"2018-09-19T11:00:03.243891379Z"}
+{"log":"level=info ts=2018-09-19T11:00:03.243577702Z caller=head.go:357 component=tsdb msg=\"WAL truncation completed\" duration=41.788µs\n","stream":"stderr","time":"2018-09-19T11:00:03.243910321Z"}
+{"log":"level=info ts=2018-09-19T13:00:03.218772707Z caller=compact.go:387 component=tsdb msg=\"write block\" mint=1537351200000 maxt=1537358400000 ulid=01CQRYN16Q9049M3V4A3GGWPQF\n","stream":"stderr","time":"2018-09-19T13:00:03.219049115Z"}
+{"log":"level=info ts=2018-09-19T13:00:03.23424648Z caller=head.go:348 component=tsdb msg=\"head GC completed\" duration=1.15828ms\n","stream":"stderr","time":"2018-09-19T13:00:03.23467462Z"}
+{"log":"level=info ts=2018-09-19T13:00:03.234369696Z caller=head.go:357 component=tsdb msg=\"WAL truncation completed\" duration=2.18µs\n","stream":"stderr","time":"2018-09-19T13:00:03.234690603Z"}
+{"log":"level=info ts=2018-09-19T15:00:03.207885574Z caller=compact.go:387 component=tsdb msg=\"write block\" mint=1537358400000 maxt=1537365600000 ulid=01CQS5GRF09GZ6D9AVKZ9JH4X9\n","stream":"stderr","time":"2018-09-19T15:00:03.208154266Z"}
+{"log":"level=info ts=2018-09-19T15:00:03.221754557Z caller=head.go:348 component=tsdb msg=\"head GC completed\" duration=1.206804ms\n","stream":"stderr","time":"2018-09-19T15:00:03.222179992Z"}
+{"log":"level=info ts=2018-09-19T15:00:03.221877234Z caller=head.go:357 component=tsdb msg=\"WAL truncation completed\" duration=2.921µs\n","stream":"stderr","time":"2018-09-19T15:00:03.22219973Z"}
+{"log":"level=info ts=2018-09-19T15:00:03.292828431Z caller=compact.go:347 component=tsdb msg=\"compact blocks\" count=3 mint=1537336800000 maxt=1537358400000 ulid=01CQS5GRGYJBYXMWRNZ4W5G9XH sources=\"[01CQRGXJPQTCE6BDFHH722TC5V 01CQRQS9Z14YNZNXNH4SPEVZ4E 01CQRYN16Q9049M3V4A3GGWPQF]\"\n","stream":"stderr","time":"2018-09-19T15:00:03.293087834Z"}
+{"log":"level=info ts=2018-09-19T17:00:03.223042517Z caller=compact.go:387 component=tsdb msg=\"write block\" mint=1537365600000 maxt=1537372800000 ulid=01CQSCCFPQNPG3ARBEMT4HPB0R\n","stream":"stderr","time":"2018-09-19T17:00:03.223302792Z"}
+{"log":"level=info ts=2018-09-19T17:00:03.233738719Z caller=head.go:348 component=tsdb msg=\"head GC completed\" duration=1.346151ms\n","stream":"stderr","time":"2018-09-19T17:00:03.234143364Z"}
+{"log":"level=info ts=2018-09-19T17:00:03.233824522Z caller=head.go:357 component=tsdb msg=\"WAL truncation completed\" duration=2.352µs\n","stream":"stderr","time":"2018-09-19T17:00:03.234160137Z"}
+{"log":"level=info ts=2018-09-19T19:00:03.203217914Z caller=compact.go:387 component=tsdb msg=\"write block\" mint=1537372800000 maxt=1537380000000 ulid=01CQSK86YQ9JAQHABEBXZX0AC3\n","stream":"stderr","time":"2018-09-19T19:00:03.20348092Z"}
+{"log":"level=info ts=2018-09-19T19:00:03.213359853Z caller=head.go:348 component=tsdb msg=\"head GC completed\" duration=1.204185ms\n","stream":"stderr","time":"2018-09-19T19:00:03.213770957Z"}
+{"log":"level=info ts=2018-09-19T19:00:03.213449316Z caller=head.go:357 component=tsdb msg=\"WAL truncation completed\" duration=2.63µs\n","stream":"stderr","time":"2018-09-19T19:00:03.213788743Z"}
+{"log":"level=info ts=2018-09-19T21:00:03.230412162Z caller=compact.go:387 component=tsdb msg=\"write block\" mint=1537380000000 maxt=1537387200000 ulid=01CQST3Y6QV9VCKGRS4CHNW1YW\n","stream":"stderr","time":"2018-09-19T21:00:03.230697842Z"}
+{"log":"level=info ts=2018-09-19T21:00:03.243328774Z caller=head.go:348 component=tsdb msg=\"head GC completed\" duration=1.104037ms\n","stream":"stderr","time":"2018-09-19T21:00:03.243751049Z"}
+{"log":"level=info ts=2018-09-19T21:00:03.243427867Z caller=head.go:357 component=tsdb msg=\"WAL truncation completed\" duration=2.285µs\n","stream":"stderr","time":"2018-09-19T21:00:03.243769884Z"}
+{"log":"level=info ts=2018-09-19T21:00:03.318007115Z caller=compact.go:347 component=tsdb msg=\"compact blocks\" count=3 mint=1537358400000 maxt=1537380000000 ulid=01CQST3YA13JRVCWV9V5EQSHPQ sources=\"[01CQS5GRF09GZ6D9AVKZ9JH4X9 01CQSCCFPQNPG3ARBEMT4HPB0R 01CQSK86YQ9JAQHABEBXZX0AC3]\"\n","stream":"stderr","time":"2018-09-19T21:00:03.318301831Z"}
+{"log":"level=info ts=2018-09-19T21:00:03.411337909Z caller=compact.go:347 component=tsdb msg=\"compact blocks\" count=3 mint=1537315200000 maxt=1537380000000 ulid=01CQST3YC942QCJMJPH0X52QZG sources=\"[01CQRGXJT7W1VDR2SA8MCQYFDA 01CQS5GRGYJBYXMWRNZ4W5G9XH 01CQST3YA13JRVCWV9V5EQSHPQ]\"\n","stream":"stderr","time":"2018-09-19T21:00:03.411621899Z"}
+{"log":"level=info ts=2018-09-19T23:00:03.207452311Z caller=compact.go:387 component=tsdb msg=\"write block\" mint=1537387200000 maxt=1537394400000 ulid=01CQT0ZNEQXG8GSDWJ6VP2YY2E\n","stream":"stderr","time":"2018-09-19T23:00:03.207733386Z"}
+{"log":"level=info ts=2018-09-19T23:00:03.218603099Z caller=head.go:348 component=tsdb msg=\"head GC completed\" duration=2.270774ms\n","stream":"stderr","time":"2018-09-19T23:00:03.219017226Z"}
+{"log":"level=info ts=2018-09-19T23:00:03.218698764Z caller=head.go:357 component=tsdb msg=\"WAL truncation completed\" duration=2.386µs\n","stream":"stderr","time":"2018-09-19T23:00:03.219035975Z"}
+{"log":"level=info ts=2018-09-20T01:00:03.23232211Z caller=compact.go:387 component=tsdb msg=\"write block\" mint=1537394400000 maxt=1537401600000 ulid=01CQT7VCPQ1Z3Y0GEF4HPMGDFY\n","stream":"stderr","time":"2018-09-20T01:00:03.235735253Z"}
+{"log":"level=info ts=2018-09-20T01:00:03.252670312Z caller=head.go:348 component=tsdb msg=\"head GC completed\" duration=7.383265ms\n","stream":"stderr","time":"2018-09-20T01:00:03.255791851Z"}
+{"log":"level=info ts=2018-09-20T01:00:03.252720598Z caller=head.go:357 component=tsdb msg=\"WAL truncation completed\" duration=1.775µs\n","stream":"stderr","time":"2018-09-20T01:00:03.255814521Z"}
+{"log":"level=info ts=2018-09-20T03:00:03.215848236Z caller=compact.go:387 component=tsdb msg=\"write block\" mint=1537401600000 maxt=1537408800000 ulid=01CQTEQ3YWYX5NN7ZA3F1KPS78\n","stream":"stderr","time":"2018-09-20T03:00:03.216121097Z"}
+{"log":"level=info ts=2018-09-20T03:00:03.228352198Z caller=head.go:348 component=tsdb msg=\"head GC completed\" duration=2.593177ms\n","stream":"stderr","time":"2018-09-20T03:00:03.228651748Z"}
+{"log":"level=info ts=2018-09-20T03:00:03.228596502Z caller=head.go:357 component=tsdb msg=\"WAL truncation completed\" duration=3.469µs\n","stream":"stderr","time":"2018-09-20T03:00:03.229137936Z"}
+{"log":"level=info ts=2018-09-20T03:00:03.313110954Z caller=compact.go:347 component=tsdb msg=\"compact blocks\" count=3 mint=1537380000000 maxt=1537401600000 ulid=01CQTEQ41ADEDZY3RCB0MXFAMM sources=\"[01CQST3Y6QV9VCKGRS4CHNW1YW 01CQT0ZNEQXG8GSDWJ6VP2YY2E 01CQT7VCPQ1Z3Y0GEF4HPMGDFY]\"\n","stream":"stderr","time":"2018-09-20T03:00:03.313403441Z"}
+```
+
+```
+admin@ip-172-20-56-102:/var/log/pods/01d4b904-baaf-11e8-bf26-066b5309ab86/queue-worker$ sudo cat 0.log
+{"log":"Wait for  30s\n","stream":"stderr","time":"2018-09-17T19:22:37.716343814Z"}
+{"log":"Listening on [faas-request], clientID=[faas-worker-queue-worker-5b6487c99-zvx8h], qgroup=[faas] durable=[]\n","stream":"stderr","time":"2018-09-17T19:22:37.71720032Z"}
+```
+

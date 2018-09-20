@@ -137,3 +137,10 @@ openfaas-fn   shrink-image-84f684c45-bmt4z                                      
 
 $ kubectl describe -n=openfaas pod kube-scheduler-ip-172-20-37-165.us-west-1.compute.internal
 ```
+### Trigger function
+```
+$ faas-cli new --lang python3 hello-python --prefix="wangaoone"
+$ faas-cli build -f ./hello-python.yml
+$ faas-cli push -f ./hello-python.yml
+$ faas-cli deploy -f ./hello-python.yml
+```

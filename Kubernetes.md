@@ -90,6 +90,9 @@ kops create cluster \
  --node-count="3" \
  --ssh-public-key="~/.ssh/id_rsa.pub"
  ```
+ ```
+ kops create cluster --name=${NAME} --zones=us-west-1b --master-size="t2.medium" --node-size="t2.medium" --node-count="4" --ssh-public-key="~/.ssh/id_rsa.pub"
+ ```
 *The zones name should be the full name from aws.<br>*
 ```bash
 $ aws ec2 describe-availability-zones --region us-east-1

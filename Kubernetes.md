@@ -82,13 +82,7 @@ $ kops create cluster  --name=${NAME}  --zones=us-west-1b  --master-size="t2.mic
 --node-size="t2.micro"  --ssh-public-key="~/.ssh/id_rsa.pub"
 ```
 ```
-kops create cluster \
- --name=${NAME} \
- --zones=us-west-2a \
- --master-size="t2.micro" \
- --node-size="t2.micro" \
- --node-count="3" \
- --ssh-public-key="~/.ssh/id_rsa.pub"
+kops create cluster --name=${NAME} --zones=us-west-2a --master-size="t2.micro" --node-size="t2.micro" --node-count="3" --ssh-public-key="~/.ssh/id_rsa.pub"
  ```
  ```
  kops create cluster --name=${NAME} --zones=us-west-1b --master-size="t2.medium" --node-size="t2.medium" --node-count="4" --ssh-public-key="~/.ssh/id_rsa.pub"

@@ -104,7 +104,15 @@ Testing the cluster
 ```bash
 $ kops validate cluster
 ```
+Delete cluster
+```
+kops delete cluster --name ${NAME} --yes
+```
 
 #### Links
 Installing Kubernetes on AWS<br>https://medium.com/containermind/how-to-create-a-kubernetes-cluster-on-aws-in-few-minutes-89dda10354f4<br>
 使用kops在AWS部署Kubernetes 集群<br>http://senlinzhan.github.io/2018/01/11/k8s-on-aws/<br>
+#### config multiple clusters
+```
+kubectl config use-context first.k8s.local
+```

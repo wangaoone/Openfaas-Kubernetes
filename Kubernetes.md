@@ -116,3 +116,5 @@ Installing Kubernetes on AWS<br>https://medium.com/containermind/how-to-create-a
 ```
 kubectl config use-context first.k8s.local
 ```
+Kubernetes config noed type
+https://github.com/kubernetes/kops/blob/master/docs/instance_groups.md
